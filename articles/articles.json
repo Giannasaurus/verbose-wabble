@@ -1,7 +1,16 @@
 {
     "articles": [
-        "This is article #1",
-        "This is article #2",
-        "This is article #3"
+        {
+            "title": "This is title #1",
+            "body": "This is the content of article #1"
+        },
+        {
+            "title": "This is title #2",
+            "body": "This is the content of article #2"
+        },
+        {
+            "title": "This is title #3",
+            "body": "This is the content of article #3"
+        }
     ]
 }

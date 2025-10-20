@@ -8,7 +8,7 @@ async function getArticles() {
         }
         
         const result = await response.json()
-        console.log(result)
+        // console.log(result)
         handleResult(result)
     }
     catch (error) {
@@ -18,10 +18,23 @@ async function getArticles() {
 
 function handleResult(result) {
     const articles = result.articles
+    console.log(articles)
+    const titles = articles.map(article => article.title)
+    console.log(titles)
+    const bodies = articles.map(article => article.body)
+    console.log(bodies)
     const articlesContainer = document.getElementById('articles-container')
     
-    articles.forEach(article => { 
-        articlesContainer.innerHTML += `<p>${article}</p>`
+    articles.forEach(article => {
+        articlesContainer.innerHTML += `<p>${article.title}: ${article.body}</p>`
+    })
+    
+    titles.forEach(title => {
+        console.log(title)
+    })
+    
+    bodies.forEach(body => {
+        console.log(body)
     })
 }
 
