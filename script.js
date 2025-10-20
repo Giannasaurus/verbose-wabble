@@ -8,34 +8,25 @@ async function getArticles() {
         }
         
         const result = await response.json()
-        // console.log(result)
-        handleResult(result)
+        displayArticles(result)
     }
     catch (error) {
-        console.log(error.message)
+        console.error(error.message)
     }
 }
 
-function handleResult(result) {
+function displayArticles(result) {
     const articles = result.articles
-    console.log(articles)
-    const titles = articles.map(article => article.title)
-    console.log(titles)
-    const bodies = articles.map(article => article.body)
-    console.log(bodies)
-    const articlesContainer = document.getElementById('articles-container')
+    const articlesContainer = document.getElementById('articlesContainer')
     
-    articles.forEach(article => {
-        articlesContainer.innerHTML += `<p>${article.title}: ${article.body}</p>`
-    })
-    
-    titles.forEach(title => {
-        console.log(title)
-    })
-    
-    bodies.forEach(body => {
-        console.log(body)
-    })
+    const content = articles.map(a => `
+        <div class="article-card">
+            ${a.title}
+            ${a.date}
+            ${a.body}
+        </div>
+    `).join('')
+    articlesContainer.innerHTML = content
 }
 
-getArticles();
+getArticles()

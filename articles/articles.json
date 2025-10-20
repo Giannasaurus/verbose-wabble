@@ -1,16 +1,19 @@
 {
     "articles": [
         {
-            "title": "This is title #1",
-            "body": "This is the content of article #1"
+            "title": "<h2>This is title #1</h2>",
+            "date": "<p class=\"date\">October 18, 2025</p>",
+            "body": "<p class=\"body\">This is the content of article #3</p>"
         },
         {
-            "title": "This is title #2",
-            "body": "This is the content of article #2"
+            "title": "<h2>This is title #2</h2>",
+            "date": "<p class=\"date\">October 19, 2025</p>",
+            "body": "<p class=\"body\">This is the content of article #2<p>"
         },
         {
-            "title": "This is title #3",
-            "body": "This is the content of article #3"
+            "title": "<h2>This is title #3</h2>",
+            "date": "<p class=\"date\">October 20, 2025</p>",
+            "body": "<p class=\"body\">This is the content of article #3</p>"
         }
     ]
 }
